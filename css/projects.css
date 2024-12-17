@@ -493,3 +493,34 @@ body, html {
     color: #ddd; /* Light gray text for readability */
     margin-bottom: 10px;
 }
+
+/* Back to Top Button Styles */
+.scroll-to-top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place at the bottom */
+    right: 20px; /* Place at the right */
+    z-index: 9999; /* Ensure it's on top */
+    font-size: 24px; /* Increase font size */
+    background-color: #ff9900; /* Orange background */
+    color: #fff; /* White icon color */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular shape */
+    width: 50px; /* Set width */
+    height: 50px; /* Set height */
+    cursor: pointer; /* Pointer cursor on hover */
+    outline: none; /* Remove outline */
+    line-height: 50px; /* Vertically center icon */
+    text-align: center; /* Horizontally center icon */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.scroll-to-top:hover {
+    background-color: #e68a00; /* Darker orange on hover */
+}
+
+/* Ensure the icon is vertically centered */
+.scroll-to-top i {
+    display: inline-block;
+    vertical-align: middle;
+}
