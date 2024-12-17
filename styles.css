@@ -40,7 +40,7 @@ body, html {
 }
 
 .nav-links li {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .nav-links a {
@@ -68,7 +68,7 @@ body, html {
     }
 
     .nav-links li {
-        margin: 20px 10; /* Add spacing between links */
+        margin: 10px 5; /* Add spacing between links */
     }
 
     .nav-links a {
