@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full-Screen Carousel and Portfolio Gallery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar">
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="projects.html">Projects</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section" id="home">
+    <div class="hero-overlay"></div>
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="videos/hero-background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content">
+        <h1>Welcome to Alectronic Solutions</h1>
+        <p>Your trusted partner for website design and dependable IT support services.</p>
+        <div class="btn-container">
+            <a href="#portfolio" class="btn">Explore My Work</a>
+            <a href="#services" class="btn">Check out IT Services</a>
+        </div>
+    </div>
+</header>
+
+<!-- Services Section -->
+<section class="services-section" id="services">
+    <h2>Services</h2>
+    <div class="services-container">
+        <div class="service-card">
+            <h3>Website Design</h3>
+            <p>I create stunning and functional websites tailored to your needs.</p>
+            <button class="btn" data-modal="modal1">Learn More</button>
+        </div>
+        <div class="service-card">
+            <h3>Virtual Assistance</h3>
+            <p>Our virtual assistants are here to help with your daily tasks.</p>
+            <button class="btn" data-modal="modal2">Learn More</button>
+        </div>
+        <div class="service-card">
+            <h3>IT Support</h3>
+            <p>Reliable IT support to keep your business running smoothly.</p>
+            <button class="btn" data-modal="modal3">Learn More</button>
+        </div>
+        <div class="service-card">
+            <h3>Cyber Security</h3>
+            <p>Protect your business with our top-notch cyber security solutions.</p>
+            <button class="btn" data-modal="modal4">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Portfolio Section -->
+<section class="portfolio-section" id="portfolio">
+    <div class="portfolio-overlay"></div>
+    <video autoplay loop muted playsinline class="portfolio-video">
+        <source src="videos/gallery-background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <h2 id="portfolio-title">My Site Design's</h2>
+    <div class="portfolio-gallery" id="portfolio-gallery">
+        <!-- Portfolio items will be added here dynamically -->
+    </div>
+</section>
+
+<!-- Quote Section -->
+<section class="quote-section">
+    <div class="quote-content">
+        <p class="quote-text">
+            "As a skilled professional, I am committed to excellence, ensuring that every project I undertake reflects my passion for client satisfaction. I strive to exceed expectations and create lasting partnerships with my clients, driving their success in the digital world."
+        </p>
+        <p class="quote-author">- Alec B.</p>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="blog-section" id="blog">
+    <h2 class="blog-title">Latest Blog Posts</h2>
+    <div class="blog-container">
+        <!-- Blog Card 1 -->
+        <div class="blog-card">
+            <img src="images/blog1.png" alt="Top 5 Website Design Trends" class="blog-image">
+            <h3 class="blog-card-title">Top 5 Website Design Trends to Watch in 2025</h3>
+            <p class="blog-card-description">
+                Discover the latest web design trends for 2025, including dark mode, 3D elements, neumorphism, and AI-powered personalization.
+            </p>
+            <a href="#" class="btn blog-btn" data-modal="blogModal1">Read More</a>
+        </div>
+
+        <!-- Blog Card 2 -->
+        <div class="blog-card">
+            <img src="images/blog2.jpg" alt="Essential Cybersecurity Tips" class="blog-image">
+            <h3 class="blog-card-title">Essential Cybersecurity Tips for Small Businesses</h3>
+            <p class="blog-card-description">
+                Learn vital cybersecurity practices to protect your business from digital threats, including data encryption, employee training, and secure network setup.
+            </p>
+            <a href="#" class="btn blog-btn" data-modal="blogModal2">Read More</a>
+        </div>
+
+        <!-- Blog Card 3 -->
+        <div class="blog-card">
+            <img src="images/blog3.jpg" alt="Maximizing IT Support" class="blog-image">
+            <h3 class="blog-card-title">Maximizing IT Support Efficiency</h3>
+            <p class="blog-card-description">
+                Discover strategies to streamline your IT support processes, reduce downtime, and improve overall system performance for your business.
+            </p>
+            <a href="#" class="btn blog-btn" data-modal="blogModal3">Read More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials-section">
+    <div class="testimonials-overlay"></div>
+    <div class="testimonials-container">
+        <h2 class="testimonials-title">What Our Clients Say</h2>
+        <div class="testimonial-item active">
+            <p class="testimonial-text">"Alectronic Solutions transformed our website into a modern, user-friendly platform. Their attention to detail and creativity exceeded our expectations!"</p>
+            <p class="testimonial-author">- Jane Doe, CEO of TechCorp</p>
+        </div>
+        <div class="testimonial-item">
+            <p class="testimonial-text">"The IT support team at Alectronic Solutions is top-notch. They resolved our server issues quickly and ensured our systems ran smoothly."</p>
+            <p class="testimonial-author">- John Smith, CTO of InnovateTech</p>
+        </div>
+        <div class="testimonial-item">
+            <p class="testimonial-text">"Their cybersecurity solutions gave us peace of mind. We now feel confident that our data is secure and protected."</p>
+            <p class="testimonial-author">- Emily Johnson, Founder of SecureNet</p>
+        </div>
+    </div>
+</section>
+
+<!-- Service Modals -->
+<div id="modal1" class="modal service-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Website Design</h2>
+        <p class="modal-description">Your website is your brand's first impression. I create professional, visually stunning, and responsive websites that effectively communicate your message and drive results.</p>
+        <ul class="service-list">
+            <li>Custom designs crafted to reflect your unique identity</li>
+            <li>Responsive development ensuring optimal performance on any device</li>
+            <li>SEO strategies that boost your online visibility and rankings</li>
+            <li>Seamless integration of modern tools and features</li>
+        </ul>
+        <div class="extra-content">
+            <h3>What You’ll Get</h3>
+            <p>A website that doesn’t just look great but also functions flawlessly, turning visitors into loyal customers. With a focus on user experience and modern design trends, I’ll help you stand out in your industry.</p>
+            <h3>My Commitment</h3>
+            <p>Every website I design is built with your goals in mind, whether it’s increasing sales, generating leads, or showcasing your work. I provide clear communication and a streamlined process from start to finish.</p>
+        </div>
+        <p class="price-tag">Starting at <strong>$999</strong></p>
+        <a href="#footer-contact" class="btn modal-btn">Contact Me</a>
+    </div>
+</div>
+
+<div id="modal2" class="modal service-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Virtual Assistance</h2>
+        <p class="modal-description">Managing a business can be overwhelming. Let me handle your day-to-day tasks so you can focus on growth and strategy.</p>
+        <ul class="service-list">
+            <li>Efficient email and calendar management to keep you organized</li>
+            <li>Accurate document preparation and streamlined workflow coordination</li>
+            <li>Social media content scheduling and engagement</li>
+            <li>Professional customer support and client follow-ups</li>
+        </ul>
+        <div class="extra-content">
+            <h3>What You’ll Gain</h3>
+            <p>More time to focus on what you do best. I take care of the administrative details so you can run your business efficiently and stress-free.</p>
+            <h3>My Approach</h3>
+            <p>I tailor my support to your needs, ensuring tasks are handled professionally, reliably, and on time. Whether you need short-term help or ongoing support, I’ve got you covered.</p>
+        </div>
+        <p class="price-tag">Starting at <strong>$45/hour</strong></p>
+        <a href="#footer-contact" class="btn modal-btn">Contact Me</a>
+    </div>
+</div>
+
+<div id="modal3" class="modal service-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">IT Support</h2>
+        <p class="modal-description">Technology should empower your business, not hold it back. I provide reliable IT support to keep your systems running smoothly and efficiently.</p>
+        <ul class="service-list">
+            <li>24/7 remote technical support for quick issue resolution</li>
+            <li>Expert troubleshooting for hardware and software challenges</li>
+            <li>Comprehensive network setup and ongoing maintenance</li>
+            <li>Cloud solutions to optimize data access and storage</li>
+        </ul>
+        <div class="extra-content">
+            <h3>What You’ll Experience</h3>
+            <p>A seamless IT environment that eliminates downtime and maximizes productivity. I ensure your systems are secure, updated, and ready to handle your business’s demands.</p>
+            <h3>Why Work With Me?</h3>
+            <p>I bring deep technical expertise and a proactive approach to solving problems. You can count on me for responsive, dependable support whenever you need it.</p>
+        </div>
+        <p class="price-tag">Starting at <strong>$199/month</strong></p>
+        <a href="#footer-contact" class="btn modal-btn">Contact Me</a>
+    </div>
+</div>
+
+<div id="modal4" class="modal service-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Cyber Security</h2>
+        <p class="modal-description">Cyber threats are on the rise, and protecting your business has never been more critical. I provide tailored security solutions to keep your data and systems safe.</p>
+        <ul class="service-list">
+            <li>In-depth security audits to identify vulnerabilities</li>
+            <li>Firewall configuration and real-time monitoring</li>
+            <li>Robust endpoint protection to secure all devices</li>
+            <li>Comprehensive data breach prevention and response planning</li>
+        </ul>
+        <div class="extra-content">
+            <h3>What I Deliver</h3>
+            <p>Peace of mind. I’ll ensure your business is safeguarded against evolving cyber threats, so you can focus on what matters most—growing your business.</p>
+            <h3>Why Trust Me?</h3>
+            <p>With a strategic and proactive approach, I don’t just react to threats—I prevent them. I provide customized solutions that fit your specific needs, ensuring top-notch protection.</p>
+        </div>
+        <p class="price-tag">Starting at <strong>$299/month</strong></p>
+        <a href="#footer-contact" class="btn modal-btn">Contact Me</a>
+    </div>
+</div>
+
+
+<!-- Portfolio Modals -->
+<div id="siteModal1" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Pawfect Pets</h2>
+        <p class="modal-description">Pawfect Pets is a modern pet care website designed to connect pet owners with reliable services like grooming, boarding, and veterinary care. The site features a clean, user-friendly interface and integrates booking functionality for seamless user experience.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/pawfect-pets" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal2" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Luxe Beauty Lounge</h2>
+        <p class="modal-description">Luxe Beauty Lounge is a luxurious beauty salon website offering a range of services including haircuts, facials, and spa treatments.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/luxe-beauty-lounge" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal3" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Vitality Fitness</h2>
+        <p class="modal-description">Vitality Fitness is a fitness center website offering various workout programs and personal training sessions.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/vitality-fitness" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal4" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Grace Haven Church</h2>
+        <p class="modal-description">Grace Haven Church is a spiritual community website offering services, events, and resources for members and visitors.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/grace-haven-church" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal5" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Coastal Horizon</h2>
+        <p class="modal-description">Coastal Horizon is a travel agency website offering vacation packages and travel tips for coastal destinations.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/coastal-horizon" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal6" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Precision Attorneys</h2>
+        <p class="modal-description">Precision Attorneys is a law firm website providing legal services and resources for clients in need of professional legal advice.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/precision-attorneys" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal7" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Nomad Escapes</h2>
+        <p class="modal-description">Nomad Escapes is a travel blog and booking platform for adventurous travelers seeking unique experiences.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/nomad-escapes" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal8" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Podwave</h2>
+        <p class="modal-description">Podwave is a podcast hosting and management platform designed for content creators and listeners.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/podwave" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal9" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Virtual Learning Hub</h2>
+        <p class="modal-description">Virtual Learning Hub is an online education platform offering courses and resources for students and professionals.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/virtuallearninghub" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal10" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Online Store</h2>
+        <p class="modal-description">Online Store is an e-commerce platform for selling products online, with a focus on user-friendly navigation and secure transactions.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/onlinestore" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal11" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Pasta Place</h2>
+        <p class="modal-description">Pasta Place is a restaurant website offering online ordering, menu browsing, and reservation services.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/pastaplace" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal12" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Comedian</h2>
+        <p class="modal-description">Comedian is a personal website for a stand-up comedian, showcasing upcoming shows, videos, and contact information.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/comedian" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal13" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Strength Together</h2>
+        <p class="modal-description">Strength Together is a nonprofit organization website promoting community support and fundraising for local causes.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/strength-together" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal14" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Elite Auto Center</h2>
+        <p class="modal-description">Elite Auto Center is an automotive repair shop website offering services, pricing, and appointment scheduling.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/elite-auto-center" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal15" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Reggae Band</h2>
+        <p class="modal-description">Reggae Band is a music group website showcasing their music, tour dates, and contact information.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/reggae-band" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal16" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Prime Cuts Barber Shop</h2>
+        <p class="modal-description">Prime Cuts Barber Shop is a traditional barber shop website offering services, pricing, and appointment booking.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/prime-cuts-barber-sh" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal17" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Vintage Vault</h2>
+        <p class="modal-description">Vintage Vault is an online store specializing in vintage collectibles and antiques.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/vintage-vault" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal18" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Virtual Comedy Net</h2>
+        <p class="modal-description">Virtual Comedy Net is a comedy website showcasing comedians, videos, and contact information.</p>
+        <iframe src="https://www.virtualcomedy.net/" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<div id="siteModal19" class="modal portfolio-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Tech Innovators</h2>
+        <p class="modal-description">Tech Innovators is a tech company website showcasing their innovative products and services.</p>
+        <iframe src="https://alectronicsolutions.wixsite.com/home" frameborder="0" class="site-iframe"></iframe>
+    </div>
+</div>
+
+<!-- Add more portfolio modals as needed -->
+
+<!-- Blog Modal 1 -->
+<div id="blogModal1" class="modal blog-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Top Strategies for Modern Website Design</h2>
+        <img src="images/blog1.png" alt="Modern Website Design Strategies" class="modal-image">
+        <p class="modal-description">
+            Your website is often the first impression people have of your business. A smart, modern design can set you apart and make a lasting impact. Here are some easy and effective strategies to help your website shine:
+        </p>
+        <div class="strategy-grid">
+            <div class="strategy-item">
+                <i class="fas fa-palette strategy-icon"></i>
+                <h3 class="strategy-title">Custom Branding</h3>
+                <p class="strategy-text">Design a unique and consistent look to build trust and make your brand memorable.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-mobile-alt strategy-icon"></i>
+                <h3 class="strategy-title">Responsive Design</h3>
+                <p class="strategy-text">Make sure your site works perfectly on phones, tablets, and computers to keep visitors happy.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-tachometer-alt strategy-icon"></i>
+                <h3 class="strategy-title">Optimized Loading Speed</h3>
+                <p class="strategy-text">Fast-loading pages keep people engaged and improve your chances of turning visitors into customers.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-search strategy-icon"></i>
+                <h3 class="strategy-title">SEO Best Practices</h3>
+                <p class="strategy-text">Follow SEO guidelines to help people find your website easily on search engines.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-magic strategy-icon"></i>
+                <h3 class="strategy-title">Interactive Elements</h3>
+                <p class="strategy-text">Add fun animations and small interactions to grab attention and make your site more engaging.</p>
+            </div>
+        </div>
+        <div class="modal-navigation">
+            <button class="modal-nav-btn prev-btn" data-modal="blogModal3">&larr;</button>
+            <button class="modal-nav-btn next-btn" data-modal="blogModal2">&rarr;</button>
+        </div>
+    </div>
+</div>
+
+<!-- Blog Modal 2 -->
+<div id="blogModal2" class="modal blog-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Cybersecurity Essentials for Small Businesses</h2>
+        <img src="images/blog2.jpg" alt="Cybersecurity Essentials" class="modal-image">
+        <p class="modal-description">
+            Small businesses are common targets for cybercriminals, but there are steps you can take to protect yourself. Here are some key strategies to keep your business safe:
+        </p>
+        <div class="strategy-grid">
+            <div class="strategy-item">
+                <i class="fas fa-lock strategy-icon"></i>
+                <h3 class="strategy-title">Data Protection Policies</h3>
+                <p class="strategy-text">Set up clear rules to secure sensitive business information.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-key strategy-icon"></i>
+                <h3 class="strategy-title">Strong Password Management</h3>
+                <p class="strategy-text">Use secure passwords and add multi-factor authentication.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-sync-alt strategy-icon"></i>
+                <h3 class="strategy-title">Regular System Updates</h3>
+                <p class="strategy-text">Keep your software updated to reduce vulnerabilities.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-cloud strategy-icon"></i>
+                <h3 class="strategy-title">Cloud Backup Solutions</h3>
+                <p class="strategy-text">Use cloud backups to recover data quickly if needed.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-eye strategy-icon"></i>
+                <h3 class="strategy-title">24/7 Monitoring</h3>
+                <p class="strategy-text">Use tools to spot and stop threats early.</p>
+            </div>
+        </div>
+        <div class="modal-navigation">
+            <button class="modal-nav-btn prev-btn" data-modal="blogModal1">&larr;</button>
+            <button class="modal-nav-btn next-btn" data-modal="blogModal3">&rarr;</button>
+        </div>
+    </div>
+</div>
+
+<!-- Blog Modal 3 -->
+<div id="blogModal3" class="modal blog-modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2 class="modal-title">Streamlining IT Support for Business Growth</h2>
+        <img src="images/blog3.jpg" alt="Streamlining IT Support" class="modal-image">
+        <p class="modal-description">
+            Good IT support helps your business grow. Here’s how to make your IT processes smoother and more effective:
+        </p>
+        <div class="strategy-grid">
+            <div class="strategy-item">
+                <i class="fas fa-tools strategy-icon"></i>
+                <h3 class="strategy-title">Proactive Issue Resolution</h3>
+                <p class="strategy-text">Solve problems before they cause disruptions.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-cloud-upload-alt strategy-icon"></i>
+                <h3 class="strategy-title">Cloud-Based Solutions</h3>
+                <p class="strategy-text">Use cloud technology for flexibility and scalability.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-user-cog strategy-icon"></i>
+                <h3 class="strategy-title">Employee Self-Service Portals</h3>
+                <p class="strategy-text">Let employees solve simple IT issues on their own.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-comments strategy-icon"></i>
+                <h3 class="strategy-title">Integrated Communication Tools</h3>
+                <p class="strategy-text">Use platforms that make teamwork easier.</p>
+            </div>
+            <div class="strategy-item">
+                <i class="fas fa-chart-line strategy-icon"></i>
+                <h3 class="strategy-title">Performance Analytics</h3>
+                <p class="strategy-text">Use data to improve IT support services.</p>
+            </div>
+        </div>
+        <div class="modal-navigation">
+            <button class="modal-nav-btn prev-btn" data-modal="blogModal2">&larr;</button>
+            <button class="modal-nav-btn next-btn" data-modal="blogModal1">&rarr;</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- About Section -->
+<section class="about-section" id="about">
+    <div class="about-overlay"></div>
+    <div class="about-content">
+        <h2 class="about-title">About This Amazing Site</h2>
+        <div class="about-text">
+            <p>I specialize in delivering premium website design and expert IT support services through Alectronic Solutions.</p>
+            <p>This website and the 20+ I have created linking to this one, serves as a showcase for my skills, while offering valuable IT insights through my informative blog.</p>
+            <p>By integrating my expertise with state-of-the-art technology, I provide custom IT solutions tailored to meet your specific requirements.</p>
+        </div>
+        <div class="about-icon">
+            <a href="#home" class="icon-link">
+            <img src="images/icon-1.png" alt="About Icon" class="icon-image">
+        </div>
+    </div>
+</section>
+
+<!-- Carousel Section -->
+<section class="carousel-section">
+    <div class="carousel-overlay"></div>
+    <div class="carousel-container">
+        <div class="carousel-item active">
+            <video autoplay loop muted playsinline class="carousel-video">
+                <source src="videos/carousel-1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="carousel-overlay">
+                <h2>I design beautiful, functional websites</h2>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <video autoplay loop muted playsinline class="carousel-video">
+                <source src="videos/carousel-2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="carousel-overlay">
+                <h2>IT Support, at your service</h2>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <video autoplay loop muted playsinline class="carousel-video">
+                <source src="videos/carousel-3.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="carousel-overlay">
+                <h2>A solution for every issue</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Contact Form -->
+            <div class="footer-contact" id="footer-contact">
+                <h3>Get In Touch</h3>
+                <form class="contact-form">
+                    <input type="text" placeholder="Name" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" required></textarea>
+                    <button class="contact-button">Contact</button>
+                </form>
+            </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="projects.html">Projects</a></li>
+            </ul>
+        </div>
+
+        <!-- Social Links -->
+        <div class="footer-social">
+            <h3>Connect With Me</h3>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/alecandrew-briggs" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Alectronic-Solutions" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+        <!-- Privacy Policy and Terms of Service Links -->
+        <div class="footer-legal">
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </div>
+
+        <!-- Copyright Notice -->
+        <p>© 2024 Alectronic Solutions. All rights reserved.</p>
+        <p>Designed and developed by Alec Briggs</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
