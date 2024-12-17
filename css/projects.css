@@ -22,21 +22,26 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #1a2a6c00;
+    background-size: cover;
     padding: 10px 20px;
     height: 60px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
 .navbar:hover {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+}
+
+.nav-links li {
+    margin-left: 10px;
 }
 
 .nav-links a {
@@ -51,6 +56,27 @@ body, html {
     color: #ff9900;
     transform: translateY(-2px);
 }
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto; /* Allow the navbar to expand vertically */
+        padding: 10px;
+    }
+
+    .nav-links {
+        align-items: center; /* Align links to the center */
+    }
+
+    .nav-links li {
+        margin: 10px 5; /* Add spacing between links */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Reduce font size for mobile */
+    }
+}
+
 
 /* Projects Section */
 .projects-section {
