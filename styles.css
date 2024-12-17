@@ -21,11 +21,9 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('navbar-background.jpg');
     background-size: cover;
     padding: 10px 20px;
     height: 60px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     transition: background-color 0.3s ease;
 }
 
@@ -36,6 +34,9 @@ body, html {
 .nav-links {
     list-style: none;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Allow links to wrap on smaller screens */
 }
 
 .nav-links li {
@@ -53,6 +54,26 @@ body, html {
 .nav-links a:hover {
     color: #ff9900;
     transform: translateY(-2px);
+}
+
+/* Media Query for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        height: auto; /* Allow the navbar to expand vertically */
+        padding: 10px;
+    }
+
+    .nav-links {
+        align-items: center; /* Align links to the center */
+    }
+
+    .nav-links li {
+        margin: 20px 10; /* Add spacing between links */
+    }
+
+    .nav-links a {
+        font-size: 14px; /* Reduce font size for mobile */
+    }
 }
 
 /* Hero Section Styles */
@@ -106,6 +127,16 @@ body, html {
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     animation: popIn 1s ease 0.5s both;
+    font-weight: bold; /* Make the title bold */
+    color: #ff9900; /* Change title color to orange */
+    text-transform: uppercase; /* Make the title uppercase */
+    letter-spacing: 2px; /* Add letter spacing for better readability */
+    text-shadow: 
+        3px 3px 0 #000, 
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000, 
+        1px 1px 0 #000; /* Add a 3D text shadow effect */
 }
 
 @keyframes popIn {
@@ -120,6 +151,8 @@ body, html {
     max-width: 600px;
     margin: 0 auto 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: black; /* Change text color to black */
+    font-weight: bold; /* Make the paragraph text bold */
 }
 
 .btn-container {
@@ -131,13 +164,14 @@ body, html {
 
 .btn {
     background-color: #ff9900;
-    color: #fff;
+    color: black; /* Change button text color to black */
     padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-size: 16px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: bold; /* Make the button text bold */
 }
 
 .btn:hover {
