@@ -133,12 +133,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const blogModals = document.querySelectorAll('.blog-modal');
 
     blogButtons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
+            event.preventDefault(); // Prevent default link behavior
             const modalId = button.getAttribute('data-modal');
             const modal = document.getElementById(modalId);
             if (modal) {
                 modal.classList.add('open');
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
+                document.body.classList.add('modal-open'); // Prevent scrolling
             }
         });
     });
@@ -147,20 +148,20 @@ document.addEventListener('DOMContentLoaded', function () {
         const closeButton = modal.querySelector('.close');
         closeButton.addEventListener('click', () => {
             modal.classList.remove('open');
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            document.body.classList.remove('modal-open'); // Restore scrolling
         });
 
         modal.addEventListener('click', (event) => {
             if (event.target === modal) {
                 modal.classList.remove('open');
-                document.body.style.overflow = 'auto'; // Restore scrolling
+                document.body.classList.remove('modal-open'); // Restore scrolling
             }
         });
 
         document.addEventListener('keydown', function(event) {
             if (event.key === 'Escape' && modal.classList.contains('open')) {
                 modal.classList.remove('open');
-                document.body.style.overflow = 'auto'; // Restore scrolling
+                document.body.classList.remove('modal-open'); // Restore scrolling
             }
         });
 
