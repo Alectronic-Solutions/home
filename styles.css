@@ -86,6 +86,13 @@ body, html {
     align-items: center;
     background-color: #00000000;
     overflow: hidden;
+    background-image: url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #000;
+    background-blend-mode: overlay;
 }
 
 .hero-overlay {
