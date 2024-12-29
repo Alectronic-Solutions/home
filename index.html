@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alectronic-Solutions</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="videos/hero-background.mp4" as="video" type="video/mp4">
-        <link rel="icon" type="image/png" href="images/icon-1.png">
+    <link rel="icon" type="image/png" href="images/icon-1.png">
 </head>
 <body>
 <nav class="navbar">
@@ -25,7 +25,7 @@
 <!-- Hero Section -->
 <header class="hero-section" id="home">
     <div class="hero-overlay"></div>
-    <video autoplay loop muted playsinline class="hero-video">
+    <video autoplay loop muted playsinline class="hero-video" loading="lazy">
         <source src="videos/hero-background.webm" type="video/webm">
         <source src="videos/hero-background.mp4" type="video/mp4">
         Your browser does not support the video tag.
@@ -70,8 +70,7 @@
 <!-- Portfolio Section -->
 <section class="portfolio-section" id="portfolio">
     <div class="portfolio-overlay"></div>
-    </video>
-    <h2 id="portfolio-title">My Site Design's</h2>
+    <h2 id="portfolio-title">My Site Designs</h2>
     <div class="portfolio-gallery" id="portfolio-gallery">
         <!-- Portfolio items will be added here dynamically -->
     </div>
@@ -93,7 +92,7 @@
     <div class="blog-container">
         <!-- Blog Card 1 -->
         <div class="blog-card">
-            <img src="images/blog1.png" alt="Top 5 Website Design Trends" class="blog-image">
+            <img src="images/blog1.png" alt="Top 5 Website Design Trends" class="blog-image" loading="lazy">
             <h3 class="blog-card-title">Top 5 Website Design Trends to Watch in 2025</h3>
             <p class="blog-card-description">
                 Discover the latest web design trends for 2025, including dark mode, 3D elements, neumorphism, and AI-powered personalization.
@@ -103,7 +102,7 @@
 
         <!-- Blog Card 2 -->
         <div class="blog-card">
-            <img src="images/blog2.jpg" alt="Essential Cybersecurity Tips" class="blog-image">
+            <img src="images/blog2.jpg" alt="Essential Cybersecurity Tips" class="blog-image" loading="lazy">
             <h3 class="blog-card-title">Essential Cybersecurity Tips for Small Businesses</h3>
             <p class="blog-card-description">
                 Learn vital cybersecurity practices to protect your business from digital threats, including data encryption, employee training, and secure network setup.
@@ -113,7 +112,7 @@
 
         <!-- Blog Card 3 -->
         <div class="blog-card">
-            <img src="images/blog3.jpg" alt="Maximizing IT Support" class="blog-image">
+            <img src="images/blog3.jpg" alt="Maximizing IT Support" class="blog-image" loading="lazy">
             <h3 class="blog-card-title">Maximizing IT Support Efficiency</h3>
             <p class="blog-card-description">
                 Discover strategies to streamline your IT support processes, reduce downtime, and improve overall system performance for your business.
@@ -549,7 +548,7 @@
         </div>
         <div class="about-icon">
             <a href="#home" class="icon-link">
-            <img src="images/icon-1.png" alt="About Icon" class="icon-image">
+            <img src="images/icon-1.png" alt="About Icon" class="icon-image"></a>
         </div>
     </div>
 </section>
@@ -643,6 +642,6 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
