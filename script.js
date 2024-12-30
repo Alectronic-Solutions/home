@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function () {
         jsonData[key] = value;
     });
 
-    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+    fetch('https://formspree.io/f/xkggzqle', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
