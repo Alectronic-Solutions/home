@@ -877,24 +877,32 @@ body.modal-open {
 
 /* Footer Styles */
 .footer {
-    background: linear-gradient(to right, #1a2a6c, #000000);
+    background: linear-gradient(145deg, #1a2a6c, #000000);
     color: #fff;
-    padding: 60px 0 20px;
+    padding: 60px 20px 20px;
+    font-family: 'Arial', sans-serif;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 40px;
     padding: 0 20px;
 }
 
-.footer h3 {
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #fff;
+/* Contact Form */
+.footer-contact h3,
+.footer-links h3,
+.footer-social h3 {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #ff9900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
 }
 
 .contact-form {
@@ -903,85 +911,108 @@ body.modal-open {
     gap: 15px;
 }
 
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .contact-form input,
+.contact-form select,
 .contact-form textarea {
     padding: 12px;
-    border-radius: 5px;
-    border: none;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
     background: rgba(255, 255, 255, 0.1);
     color: #fff;
     font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder,
+.contact-form select {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: #ff9900;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
 }
 
 .contact-form textarea {
-    height: 100px;
+    height: 150px;
     resize: none;
 }
 
-/* Contact Button Styling */
-.contact-button {
-    background-color: orange; /* Orange background */
-    color: white; /* White text */
-    border: none; /* Remove default border */
-    border-radius: 20px; /* Rounded corners */
-    padding: 10px 20px; /* Padding inside the button */
-    font-size: 16px; /* Text size */
-    cursor: pointer; /* Change cursor to pointer on hover */
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  /* Hover Effect */
-  .contact-button:hover {
-    background-color: darkorange; /* Slightly darker orange on hover */
-  }
-  
+.submit-btn {
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background-color: #e68a00;
+    transform: translateY(-2px);
+}
+
+/* Quick Links */
 .footer-links ul {
     list-style: none;
+    padding: 0;
 }
 
 .footer-links a {
     color: #fff;
     text-decoration: none;
-    display: block;
-    padding: 5px 0;
-    transition: color 0.3s ease;
     font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+    margin-bottom: 10px;
 }
 
 .footer-links a:hover {
     color: #ff9900;
+    transform: translateX(5px);
 }
 
-.social-icons {
+/* Social Links */
+.footer-social .social-icons {
     display: flex;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .social-icons a {
     color: #fff;
     font-size: 24px;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .social-icons a:hover {
     color: #ff9900;
+    transform: translateY(-3px);
 }
 
+/* Footer Bottom */
 .footer-bottom {
     text-align: center;
     padding-top: 40px;
     margin-top: 40px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Footer Legal Links */
-.footer-legal {
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    color: #fff;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .footer-legal ul {
@@ -989,11 +1020,12 @@ body.modal-open {
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    gap: 20px;
 }
 
 .footer-legal a {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-size: 14px;
     transition: color 0.3s ease;
@@ -1003,20 +1035,28 @@ body.modal-open {
     color: #ff9900;
 }
 
-.footer-legal li:not(:last-child)::after {
-    content: "|";
-    color: #fff;
-    margin-left: 10px;
+.footer-bottom p {
+    margin: 10px 0;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: 1fr;
         text-align: center;
     }
 
+    .footer-links a {
+        margin-bottom: 8px;
+    }
+
     .social-icons {
         justify-content: center;
+    }
+
+    .footer-legal ul {
+        flex-direction: column;
+        gap: 10px;
     }
 }
 
