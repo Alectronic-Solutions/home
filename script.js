@@ -227,5 +227,35 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(this);
+    const jsonData = {};
+
+    formData.forEach((value, key) => {
+        jsonData[key] = value;
+    });
+
+    fetch('https://formspree.io/f/YOUR_FORM_ID', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(jsonData),
+    })
+    .then(response => {
+        if (response.ok) {
+            alert('Thank you for your message! We will get back to you soon.');
+            this.reset();
+        } else {
+            alert('Oops! Something went wrong. Please try again.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Oops! Something went wrong. Please try again.');
+    });
+});
     
 });
