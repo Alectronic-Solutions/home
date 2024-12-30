@@ -188,15 +188,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // Footer contact form submission
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-        });
-    }
 
     // Scroll to top functionality
     const scrollToTopButton = document.createElement('button');
