@@ -1,3 +1,3 @@
 # Home
  Home Page
-https://alectronic-solutions.github.io/home/
+https://alectronic-solutions.github.io/Grace-Haven-Church/
